@@ -1,0 +1,61 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  @include dmsans(400);
+
+  font-size: 16px;
+  line-height: 1.2;
+  background-color: $secondary;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.button {
+  display: block;
+  padding: 0;
+  color: $primary;
+  font-size: 14px;
+  background-color: $white;
+  outline: transparent;
+  cursor: pointer;
+}
+
+.logo {
+  outline-color: $black;
+}
+
+.title {
+  @include dmsans(700);
+
+  margin: 0 auto;
+  color: $secondary;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
