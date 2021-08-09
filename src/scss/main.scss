@@ -4,3 +4,270 @@
 @import "./helpers/global";
 @import "./components/**/*";
 @import "./pages/**/*";
+
+.header {
+  padding: 30px 0;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__phone {
+    margin-left: 15px;
+    font-size: 25px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 15px;
+  }
+}
+
+.intro {
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+  }
+
+  &__title {
+    max-width: 550px;
+    color: $white;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    &--big {
+      font-size: 40px;
+    }
+  }
+}
+
+.about {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    display: grid;
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
+    text-align: justify;
+    border-bottom: 4px solid $accent;
+
+    & span {
+      color: $accent;
+    }
+  }
+}
+
+.causes {
+  padding: 50px 0 30px;
+
+  &__title {
+    margin: 0 0 30px 200px;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-rows: 1fr;
+    counter-reset: steps;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px 200px;
+    font-size: 30px;
+    text-align: justify;
+    counter-increment: steps;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -150px;
+      display: inline-grid;
+      place-items: center;
+      width: 70px;
+      height: 70px;
+      color: $white;
+      font-size: 50px;
+      line-height: 70px;
+      background-color: $accent;
+      border-radius: 50%;
+      content: counter(steps);
+    }
+  }
+}
+
+.footer {
+  padding: 30px 15px;
+  color: $white;
+  font-size: 12px;
+  line-height: 1.8;
+  background-color: $text;
+
+  & .menu__list {
+    font-size: 15px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    max-width: 220px;
+  }
+
+  &__copy-link {
+    display: block;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item svg {
+    vertical-align: middle;
+  }
+
+  &__phone,
+  &__mail {
+    margin-left: 15px;
+  }
+}
+
+.benefits {
+  margin-bottom: 20px;
+
+  &__text {
+    margin-bottom: 50px;
+    font-size: 25px;
+    text-align: justify;
+
+    & span {
+      color: $accent;
+    }
+  }
+
+  &__slogan {
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+
+    & span {
+      color: $accent;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 17px;
+    place-items: center;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+  }
+
+  &__image {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__name {
+    text-transform: uppercase;
+  }
+}
+
+.structure {
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    display: grid;
+    grid-row-gap: 15px;
+    grid-column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
+    text-align: justify;
+
+    & span {
+      color: $accent;
+    }
+  }
+
+  &__formula {
+    margin: 0 auto 50px;
+  }
+}
+
+.products {
+  margin-bottom: 50px;
+
+  &__title {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    margin-bottom: 30px;
+    color: $accent;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 20px;
+    text-align: justify;
+  }
+}

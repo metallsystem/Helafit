@@ -7,11 +7,12 @@ body {
   display: flex;
   flex-direction: column;
 
-  @include dmsans(400);
+  @include opensans(300);
 
-  font-size: 16px;
+  color: $text;
+  font-size: 20px;
   line-height: 1.2;
-  background-color: $secondary;
+  background-color: $white;
 }
 
 main {
@@ -39,7 +40,7 @@ main {
 .button {
   display: block;
   padding: 0;
-  color: $primary;
+  color: $accent;
   font-size: 14px;
   background-color: $white;
   outline: transparent;
@@ -51,11 +52,18 @@ main {
 }
 
 .title {
-  @include dmsans(700);
-
   margin: 0 auto;
-  color: $secondary;
+  color: $text;
   font-size: 36px;
   line-height: 1.2;
-  text-align: center;
+}
+
+.intro__title.page-title {
+  margin-top: 40px;
+  font-size: 60px;
+}
+
+.intro__content.page-content {
+  align-items: start;
+  height: 350px;
 }
