@@ -36,8 +36,31 @@
     text-transform: uppercase;
   }
 
-  &__item:not(:first-child) {
-    margin-left: 15px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__link {
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    outline: transparent;
+    transition: 0.3s border-bottom, 0.3s color;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      color: $accent;
+      border-bottom: 2px solid $accent;
+    }
+
+    &--active {
+      color: $accent;
+      border-bottom: 2px solid $accent;
+    }
   }
 }
 
@@ -77,10 +100,6 @@
     padding-bottom: 30px;
     text-align: justify;
     border-bottom: 4px solid $accent;
-
-    & span {
-      color: $accent;
-    }
   }
 }
 
@@ -170,20 +189,12 @@
     margin-bottom: 50px;
     font-size: 25px;
     text-align: justify;
-
-    & span {
-      color: $accent;
-    }
   }
 
   &__slogan {
     margin-bottom: 50px;
     font-size: 30px;
     text-align: center;
-
-    & span {
-      color: $accent;
-    }
   }
 
   &__list {
@@ -224,10 +235,6 @@
     grid-template-columns: 1fr 1fr;
     padding-bottom: 30px;
     text-align: justify;
-
-    & span {
-      color: $accent;
-    }
   }
 
   &__formula {
@@ -269,5 +276,321 @@
   &__description {
     font-size: 20px;
     text-align: justify;
+  }
+}
+
+.usage {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    column-count: 2;
+    column-gap: 4%;
+    column-width: 48%;
+
+    & p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    & ul {
+      margin-bottom: 15px;
+      font-size: 18px;
+      line-height: 1.4;
+      text-align: justify;
+      list-style-type: disc;
+      padding-inline-start: 40px;
+    }
+  }
+}
+
+.technology {
+  margin-bottom: 50px;
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 24px;
+  }
+}
+
+.feedback {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid $accent;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  &__phone {
+    position: relative;
+    margin-left: 40px;
+
+    &::before {
+      position: absolute;
+      top: 5px;
+      left: -20px;
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/phone.svg');
+      content: "";
+    }
+  }
+
+  &__text {
+    text-align: justify;
+
+    & p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    & ul {
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: justify;
+      list-style-type: disc;
+      padding-inline-start: 40px;
+    }
+  }
+}
+
+.contacts {
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin-bottom: 50px;
+  }
+
+  &__label {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  &__input {
+    height: 50px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid $text;
+    outline: transparent;
+  }
+
+  &__textarea {
+    height: 200px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid $text;
+    outline: transparent;
+    resize: none;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    line-height: 1.6;
+  }
+
+  &__address {
+    & span {
+      display: block;
+    }
+  }
+
+  &__phone,
+  &__email {
+    padding-left: 15px;
+    font-weight: bold;
+  }
+}
+
+.store {
+  margin-bottom: 50px;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__total {
+    margin-right: 50px;
+    font-weight: bold;
+
+    &::before {
+      margin-right: 10px;
+      content: "Итого:";
+    }
+
+    &::after {
+      margin-left: 5px;
+      content: "грн";
+    }
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $accent;
+  place-items: center;
+
+  &__image {
+    max-height: 200px;
+  }
+
+  &__name {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+
+    &::before {
+      padding-right: 10px;
+      content: "Цена:";
+    }
+
+    &::after {
+      padding-left: 5px;
+      content: "грн/л";
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+  }
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: $text;
+    font-size: 30px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: transparent;
+    transition: 0.3s color, 0.3s border-color;
+
+    &:disabled {
+      color: $text;
+    }
+
+    &:enabled {
+      color: $accent;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      color: $accent;
+      border: 1px solid $accent;
+    }
+  }
+
+  &__input {
+    width: 75px;
+    height: 40px;
+    margin: 0 5px;
+    text-align: center;
+    border: 1px solid rgba(#000, 0.2);
+    border-radius: 5px;
+    outline: transparent;
+    transition: 0.3s border-color;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      display: none;
+    }
+
+    &:hover {
+      border-color: $text;
+    }
+
+    &:focus {
+      border-color: $accent;
+    }
+  }
+
+  &__sum {
+    font-weight: bold;
+
+    &::before {
+      margin-right: 10px;
+      content: "Сумма:";
+    }
+
+    &::after {
+      margin-left: 5px;
+      content: "грн";
+    }
   }
 }

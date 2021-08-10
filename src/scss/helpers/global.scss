@@ -39,10 +39,13 @@ main {
 
 .button {
   display: block;
-  padding: 0;
-  color: $accent;
-  font-size: 14px;
-  background-color: $white;
+  width: 200px;
+  padding: 20px;
+  color: $white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: $accent;
+  border: 2px solid $accent;
   outline: transparent;
   cursor: pointer;
 }
@@ -51,11 +54,17 @@ main {
   outline-color: $black;
 }
 
+.helafit {
+  color: $accent;
+  text-transform: uppercase;
+}
+
 .title {
   margin: 0 auto;
   color: $text;
   font-size: 36px;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 
 .intro__title.page-title {
