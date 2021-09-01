@@ -13,6 +13,10 @@ body {
   font-size: 20px;
   line-height: 1.2;
   background-color: $white;
+
+  @include media($media576) {
+    font-size: 17px;
+  }
 }
 
 main {
@@ -38,20 +42,93 @@ main {
 }
 
 .button {
+  position: relative;
+  top: 0;
   display: block;
-  width: 200px;
-  padding: 20px;
+  width: 100%;
+  padding: 12px 20px;
   color: $white;
   font-weight: bold;
   font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   background-color: $accent;
   border: 2px solid $accent;
+  border-radius: 5px;
   outline: transparent;
+  box-shadow: 1px 4px 5px 0 #0d1a09;
   cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+  &:hover {
+    background-color: $accent-hover;
+    border-color: $accent-hover;
+  }
+
+  &:focus {
+    color: $accent;
+    background-color: $white;
+  }
+
+  &:active {
+    top: 3px;
+    box-shadow: 0 2px 2px 0 #0d1a09;
+  }
+}
+
+.js-focus-visible .button:focus:not(.focus-visible) {
+  color: $white;
+  background-color: $accent;
 }
 
 .logo {
-  outline-color: $black;
+  &__img {
+    width: 300px;
+    height: 100px;
+
+    @include media($media769) {
+      width: 250px;
+      height: 75px;
+    }
+
+    @include media($media576) {
+      width: 150px;
+      height: 50px;
+    }
+  }
+
+  &:focus {
+    outline: 2px solid $accent;
+  }
+}
+
+.js-focus-visible .logo:focus:not(.focus-visible) {
+  outline: 2px solid transparent;
+}
+
+.burger-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  outline: 2px solid transparent;
+
+  @include media($media769) {
+    display: block;
+  }
+
+  &:focus {
+    outline: 2px solid $accent;
+  }
+}
+
+.js-focus-visible .burger-menu:focus:not(.focus-visible) {
+  outline: 2px solid transparent;
 }
 
 .helafit {
@@ -65,14 +142,189 @@ main {
   font-size: 36px;
   line-height: 1.2;
   text-transform: uppercase;
+
+  @include media($media769) {
+    font-size: 30px;
+  }
+
+  @include media($media576) {
+    font-size: 20px;
+  }
 }
 
 .intro__title.page-title {
   margin-top: 40px;
   font-size: 60px;
+
+  @include media($media769) {
+    font-size: 45px;
+  }
+
+  @include media($media576) {
+    font-size: 35px;
+  }
 }
 
 .intro__content.page-content {
   align-items: start;
   height: 350px;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.text-link {
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s;
+
+  &:focus {
+    color: $accent;
+    border-bottom: 2px solid $accent;
+  }
+
+  &:hover {
+    color: $accent-hover;
+  }
+}
+
+.js-focus-visible .text-link:focus:not(.focus-visible) {
+  color: $accent;
+  border-bottom: 2px solid transparent;
+}
+
+.phone-link {
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-color 0.3s, fill 0.3s;
+  fill: $text;
+
+  &:focus {
+    color: $accent;
+    fill: $accent;
+
+    & span {
+      border-bottom: 2px solid $accent;
+    }
+  }
+
+  &:hover {
+    color: $accent;
+    fill: $accent;
+  }
+}
+
+.js-focus-visible .phone-link:focus:not(.focus-visible) {
+  color: $text;
+  fill: $text;
+
+  & span {
+    border-bottom: 2px solid transparent;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $text;
+  border: 4px solid #f9f9f9;
+  border-radius: 15px;
+
+  &:hover {
+    background-color: #adafb6;
+  }
+}
+
+.drop-down {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__open,
+  &__btn {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    outline: transparent;
+    transition: fill 0.3s, border-color 0.3s, color 0.3s, background-color 0.3s;
+
+    & svg {
+      pointer-events: none;
+    }
+  }
+
+  &__open {
+    justify-content: center;
+    width: 40px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    fill: $text;
+
+    &:focus {
+      border-color: $accent;
+      fill: $accent;
+    }
+
+    &:hover {
+      background-color: #ececec;
+      fill: $accent;
+    }
+  }
+
+  &__btn {
+    width: 250px;
+    padding: 8px 15px;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 25%);
+
+    &:focus {
+      color: $accent;
+      border-color: $accent;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $white;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+}
+
+.js-focus-visible .drop-down__open:focus:not(.focus-visible) {
+  border-color: transparent;
+  fill: $text;
+}
+
+.js-focus-visible .drop-down__btn:focus:not(.focus-visible) {
+  color: $text;
+  border-color: transparent;
+}
+
+.drop-down__open--active+.drop-down__list {
+  visibility: visible;
+  opacity: 1;
 }

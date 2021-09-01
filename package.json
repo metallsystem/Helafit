@@ -72,6 +72,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "element-closest-polyfill": "^1.0.4",
     "focus-visible": "^5.2.0",
     "vanilla-lazyload": "^17.4.0"
   }

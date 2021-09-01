@@ -48,13 +48,16 @@ textarea,
 select {
   font: inherit;
   letter-spacing: inherit;
+  outline: transparent;
 }
 
 button {
+  outline: transparent;
   cursor: pointer;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  outline: transparent;
 }

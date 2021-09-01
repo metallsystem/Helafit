@@ -27,72 +27,175 @@
         Магазин
       </h2>
       <ul class="store__list">
-        <li class="card">
+        <li class="card" id="seeds">
+          <div class="drop-down">
+            <button class="drop-down__open" type="button">
+              <svg width="20" height="20">
+                <use xlink:href="images/sprites/sprite-mono.svg#ellipsis-v"></use>
+              </svg>
+            </button>
+            <ul class="drop-down__list">
+              <li class="drop-down__item">
+                <button class="drop-down__btn clear" type="button">Сбросить</button>
+              </li>
+            </ul>
+          </div>
           <img class="card__image" src="images/helafit-seeds.png" alt="Хелафит Семена">
           <div class="card__description">
-            <a class="card__name helafit" href="#">Хелафит<sup>®</sup> Семена</a>
-            <span class="card__price">270.00</span>
+            <p class="card__name helafit">Хелафит<sup>®</sup> Семена</p>
+            <span class="card__price">350.00</span>
             <p class="card__text">Для предпосевной обработки семян от болезней и стимуляции их прорастания. Расход — 1 л/ тонну семян.</p>
           </div>
           <div class="card__wrapper">
             <div class="card__count">
               <button class="card__btn card__minus" type="button" disabled>
-                <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <svg class="card__icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#minus"></use>
+                </svg>
               </button>
-              <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="">
+              <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="" placeholder="0" value="0">
               <button class="card__btn card__plus" type="button">
-                <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <svg class="card__icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#plus"></use>
+                </svg>
               </button>
             </div>
-            <span class="card__sum">0.00</span>
+            <output class="card__sum">0</output>
           </div>
         </li>
-        <li class="card">
+        <li class="card" id="kombi">
+          <div class="drop-down">
+            <button class="drop-down__open" type="button">
+              <svg width="20" height="20">
+                <use xlink:href="images/sprites/sprite-mono.svg#ellipsis-v"></use>
+              </svg>
+            </button>
+            <ul class="drop-down__list">
+              <li class="drop-down__item">
+                <button class="drop-down__btn clear" type="button">Сбросить</button>
+              </li>
+            </ul>
+          </div>
           <img class="card__image" src="images/helafit-kombi.png" alt="Хелафит Комби">
           <div class="card__description">
-            <a class="card__name helafit" href="#">Хелафит<sup>®</sup> Комби</a>
-            <span class="card__price">165.00</span>
+            <p class="card__name helafit">Хелафит<sup>®</sup> Комби</p>
+            <span class="card__price">270.00</span>
             <p class="card__text">Препарат оперативного действия, используемый традиционном земледелии, путем опрыскивания посевов в период вегетации, повышает биологическую активность растения и его репродуктивные функции, а также повышает урожай и его качество. Расход — 1 л/га.</p>
           </div>
           <div class="card__wrapper">
             <div class="card__count">
               <button class="card__btn card__minus" type="button" disabled>
-                <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <svg class="card__icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#minus"></use>
+                </svg>
               </button>
-              <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="">
+              <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="" placeholder="0" value="0">
               <button class="card__btn card__plus" type="button">
-                <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <svg class="card__icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#plus"></use>
+                </svg>
               </button>
             </div>
-            <span class="card__sum">0.00</span>
+            <output class="card__sum">0</output>
           </div>
         </li>
-        <li class="card">
+        <li class="card" id="organik">
+          <div class="drop-down">
+            <button class="drop-down__open" type="button">
+              <svg width="20" height="20">
+                <use xlink:href="images/sprites/sprite-mono.svg#ellipsis-v"></use>
+              </svg>
+            </button>
+            <ul class="drop-down__list">
+              <li class="drop-down__item">
+                <button class="drop-down__btn clear" type="button">Сбросить</button>
+              </li>
+            </ul>
+          </div>
           <img class="card__image" src="images/helafit-organik.png" alt="Хелафит Органик">
           <div class="card__description">
-            <a class="card__name helafit" href="#">Хелафит<sup>®</sup> Органик</a>
-            <span class="card__price">165.00</span>
+            <p class="card__name helafit">Хелафит<sup>®</sup> Органик</p>
+            <span class="card__price">270.00</span>
             <p class="card__text">Препарат оперативного действия, используемый в органическом земледелии при опрыскивании в период вегетации, повышает биологическую активность растения и его репродуктивные функции, а также повышает урожай и его качество. Расход — 1 л/га.</p>
           </div>
           <div class="card__wrapper">
             <div class="card__count">
               <button class="card__btn card__minus" type="button" disabled>
-                <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <svg class="card__icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#minus"></use>
+                </svg>
               </button>
-              <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="">
+              <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="" placeholder="0" value="0">
               <button class="card__btn card__plus" type="button">
-                <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                <svg class="card__icon" width="20" height="20">
+                  <use xlink:href="images/sprites/sprite-mono.svg#plus"></use>
+                </svg>
               </button>
             </div>
-            <span class="card__sum">0.00</span>
+            <output class="card__sum">0</output>
           </div>
         </li>
       </ul>
       <div class="store__wrapper">
-        <span class="store__total">0.00</span>
-        <button class="store__btn button" type="button">Оформить заказ</button>
+        <output class="store__total">0</output>
+        <a class="store__btn button" href="checkout.html">Оформить заказ</a>
       </div>
     </div>
+  </section>
+
+  <section class="documents">
+    <div class="container">
+      <h2 class="title documents__title">Документы</h2>
+      <ul class="documents__list">
+        <li class="documents__item">
+          <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
+          <img class="documents__image" src="images/documents/documents-01.jpg" alt="Свидетельство о Государственной регистрации">
+        </li>
+        <li class="documents__item">
+          <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
+          <img class="documents__image" src="images/documents/documents-02.jpg" alt="Подтверждение качества для использования в сельскомхлзяйстве">
+        </li>
+        <li class="documents__item">
+          <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
+          <img class="documents__image" src="images/documents/documents-03.jpg" alt="Технические условия">
+        </li>
+        <li class="documents__item">
+          <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
+          <img class="documents__image" src="images/documents/documents-04.jpg" alt="Заключение санитарно-эпидемиологической экспертизы">
+        </li>
+      </ul>
+    </div>
+
+    <ul class="documents__popup">
+      <li class="popup" role="dialog">
+        <div class="popup__body close-popup">
+          <div class="popup__content">
+            <img class="popup__img" src="images/documents/documents-01.jpg" alt="Свидетельство о Государственной регистрации">
+          </div>
+        </div>
+      </li>
+      <li class="popup" role="dialog">
+        <div class="popup__body close-popup">
+          <div class="popup__content">
+            <img class="popup__img" src="images/documents/documents-02.jpg" alt="Подтверждение качества для использования в сельскомхлзяйстве">
+          </div>
+        </div>
+      </li>
+      <li class="popup" role="dialog">
+        <div class="popup__body close-popup">
+          <div class="popup__content">
+            <img class="popup__img" src="images/documents/documents-03.jpg" alt="Технические условия">
+          </div>
+        </div>
+      </li>
+      <li class="popup" role="dialog">
+        <div class="popup__body close-popup">
+          <div class="popup__content">
+            <img class="popup__img" src="images/documents/documents-04.jpg" alt="Заключение санитарно-эпидемиологической экспертизы">
+          </div>
+        </div>
+      </li>
+    </ul>
   </section>
 
 </main>
