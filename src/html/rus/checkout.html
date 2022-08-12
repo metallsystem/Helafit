@@ -1,0 +1,222 @@
+@@include('parts/page-top.html', { "lang": "ru", "title": "Оформление заказа" })
+
+<header class="header">
+  <div class="container">
+    <div class="header__top  header__top--border">
+      <a class="logo header__logo" href="/rus/index.html">
+        <img class="logo__img" src="../images/helafit_logo_1.svg" alt="Логотип Хелафит групп">
+      </a>
+      <div class="header__wrapper">
+        <a class="header__phone phone-link header__phone--visible" href="tel:+380674857609">
+          <svg width="20" height="20">
+            <use xlink:href="../images/sprites/sprite-mono.svg#phone"></use>
+          </svg>
+          <span>+38 067 485 76 09</span>
+        </a>
+        <a class="header__phone phone-link header__phone--visible" href="tel:+380677094119">
+          <svg width="20" height="20">
+            <use xlink:href="../images/sprites/sprite-mono.svg#phone"></use>
+          </svg>
+          <span>+38 067 709 41 19</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+
+  <section class="checkout">
+    <div class="container">
+      <h1 class="title checkout__title">Оформление заказа</h1>
+      <form class="checkout__form form" name="checkout-form">
+        <ul class="form__content">
+          <li class="form__wrapper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Ваши контактные данные</legend>
+              <div class="form__inner">
+                <div class="form__grid form__grid--overflow">
+                  <div class="form__box">
+                    <input class="form__input" type="text" name="name" id="name" required>
+                    <label class="form__label" for="name">Имя</label>
+                  </div>
+                  <div class="form__box">
+                    <input class="form__input" type="text" name="surname" id="surname" required>
+                    <label class="form__label" for="surname">Фамилия</label>
+                  </div>
+                  <div class="form__box">
+                    <input class="form__input" type="tel" name="phone" id="phone" required>
+                    <label class="form__label" for="phone">Телефон</label>
+                  </div>
+                  <div class="form__box">
+                    <input class="form__input" type="text" name="city" id="city" required>
+                    <label class="form__label" for="city">Город</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </li>
+
+          <li class="form__wrapper" id="order">
+
+          </li>
+
+          <li class="form__wrapper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Доставка</legend>
+              <ul class="form__list">
+                <li class="form__item checked">
+                  <input class="form__radio" type="radio" name="delivery" id="delivery" checked>
+                  <label class="form__radio-label" for="delivery">Доставка по адресу</label>
+                  <div class="form__grid">
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="delivery-city" id="delivery-city" required>
+                      <label class="form__label" for="delivery-city">Город</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="street" id="street" required>
+                      <label class="form__label" for="street">Улица</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="house" id="house" required>
+                      <label class="form__label" for="house">Дом</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="flat" id="flat">
+                      <label class="form__label" for="flat">Квартира</label>
+                    </div>
+                  </div>
+                </li>
+                <li class="form__item">
+                  <input class="form__radio" type="radio" name="delivery" id="selfdelivery">
+                  <label class="form__radio-label" for="selfdelivery">Самовывоз</label>
+                  <div class="form__grid form__grid--none">
+                    <p class="form__text">Адрес пункта самовывоза: г. Одесса, ул. Одария, дом 2</p>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+
+          <li class="form__wrapper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Оплата</legend>
+              <ul class="form__list">
+                <li class="form__item checked">
+                  <input class="form__radio" type="radio" name="pay" id="credit-card" checked>
+                  <label class="form__radio-label" for="credit-card">Оплата картой онлайн</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__radio" type="radio" name="pay" id="entity">
+                  <label class="form__radio-label" for="entity">Безналичными для юридических лиц</label>
+                  <div class="form__grid">
+                    <div class="form__box">
+                      <input class="form__input" type="email" name="email" id="entity-email" required>
+                      <label class="form__label" for="entity-email">Email</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="entity-name" id="entity-name" required>
+                      <label class="form__label" for="entity-name">Полное название юридического лица</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="number" name="kode" id="entity-kode" required>
+                      <label class="form__label" for="entity-kode">Код ЕГРПОУ</label>
+                    </div>
+                  </div>
+                </li>
+                <li class="form__item">
+                  <input class="form__radio" type="radio" name="pay" id="person">
+                  <label class="form__radio-label" for="person">Безналичными для физических лиц</label>
+                  <div class="form__grid">
+                    <div class="form__box">
+                      <input class="form__input" type="email" name="email" id="person-email" required>
+                      <label class="form__label" for="person-email">Email</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="person-name" id="person-name" required>
+                      <label class="form__label" for="person-name">Полное название физического лица</label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+
+          <li class="form__wrapper">
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Контактные данные получателя товара</legend>
+              <ul class="form__list">
+                <li class="form__item checked">
+                  <input class="form__radio" type="radio" name="recipient" id="self" checked>
+                  <label class="form__radio-label" for="self">Я</label>
+                </li>
+                <li class="form__item">
+                  <input class="form__radio" type="radio" name="recipient" id="another">
+                  <label class="form__radio-label" for="another">Другой человек</label>
+                  <div class="form__grid">
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="recipient-name" id="recipient-name" required>
+                      <label class="form__label" for="recipient-name">Имя</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="text" name="surname" id="recipient-surname" required>
+                      <label class="form__label" for="recipient-surname">Фамилия</label>
+                    </div>
+                    <div class="form__box">
+                      <input class="form__input" type="tel" name="phone" id="recipient-phone" required>
+                      <label class="form__label" for="recipient-phone">Телефон</label>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </li>
+        </ul>
+        <aside class="form__sidebar sidebar">
+
+        </aside>
+      </form>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__copy">
+        © Copyright 2010-2021 Helafit. <a class="footer__copy-link text-link" href="https://www.helafit.pro">https://www.helafit.pro <span class="sr-only">Ссылка на наш веб-сайт</span></a>
+        Все&nbsp;права&nbsp;защищены
+      </div>
+      <ul class="footer__contacts">
+        <li class="footer__item">
+          <a class="footer__phone phone-link" href="tel:+380674857609">
+            <svg width="12" height="12">
+              <use xlink:href="../images/sprites/sprite-mono.svg#phone"></use>
+            </svg>
+            <span>+38 067 485 76 09</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__phone phone-link" href="tel:+380677094119">
+            <svg width="12" height="12">
+              <use xlink:href="../images/sprites/sprite-mono.svg#phone"></use>
+            </svg>
+            <span>+38 067 709 41 19</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__mail phone-link" href="mailto:helafitgroup@gmail.com" target="_blank">
+            <svg width="15" height="15">
+              <use xlink:href="../images/sprites/sprite-mono.svg#envelope"></use>
+            </svg>
+            <span>helafitgroup@gmail.com</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+@@include('parts/page-bottom.html')

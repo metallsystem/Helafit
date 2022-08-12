@@ -13,5 +13,6 @@ node_modules
 *.rar
 *.zip
 .idea
+.env
 ex_files
 Thumbs.db

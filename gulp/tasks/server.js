@@ -4,10 +4,11 @@ import config from '../config';
 const server = (callback) => {
   browserSync.create().init({
     server: {
-      baseDir: config.dest.root,
+      baseDir: `${config.dest.root}`,
+      directory: true
     },
     files: [
-      `${config.dest.html}/*.html`,
+      `${config.dest.html}/**/*.html`,
       `${config.dest.css}/*.css`,
       `${config.dest.js}/*.js`,
       {

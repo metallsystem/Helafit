@@ -5,13 +5,15 @@
                                  "usage": "",
                                  "store": "menu__link--active",
                                  "feedback": "",
-                                 "contacts": ""
+                                 "contacts": "",
+                                 "linkRus": "/rus/store.html",
+                                 "linkUkr": "/ukr/store.html",
                                 }
                                 )
 
 <main class="main">
 
-  <section class="intro" style="background-image: url(images/store_intro.jpg);">
+  <section class="intro" style="background-image: url(../images/store_intro.jpg);">
     <div class="container">
       <div class="intro__content page-content">
         <h1 class="intro__title page-title">
@@ -31,7 +33,7 @@
           <div class="drop-down">
             <button class="drop-down__open" type="button">
               <svg width="20" height="20">
-                <use xlink:href="images/sprites/sprite-mono.svg#ellipsis-v"></use>
+                <use xlink:href="../images/sprites/sprite-mono.svg#ellipsis-v"></use>
               </svg>
             </button>
             <ul class="drop-down__list">
@@ -40,7 +42,7 @@
               </li>
             </ul>
           </div>
-          <img class="card__image" src="images/helafit-seeds.png" alt="Хелафит Семена">
+          <img class="card__image" src="../images/helafit-seeds.png" alt="Хелафит Семена">
           <div class="card__description">
             <p class="card__name helafit">Хелафит<sup>®</sup> Семена</p>
             <span class="card__price">350.00</span>
@@ -50,13 +52,13 @@
             <div class="card__count">
               <button class="card__btn card__minus" type="button" disabled>
                 <svg class="card__icon" width="20" height="20">
-                  <use xlink:href="images/sprites/sprite-mono.svg#minus"></use>
+                  <use xlink:href="../images/sprites/sprite-mono.svg#minus"></use>
                 </svg>
               </button>
               <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="" placeholder="0" value="0">
               <button class="card__btn card__plus" type="button">
                 <svg class="card__icon" width="20" height="20">
-                  <use xlink:href="images/sprites/sprite-mono.svg#plus"></use>
+                  <use xlink:href="../images/sprites/sprite-mono.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -67,7 +69,7 @@
           <div class="drop-down">
             <button class="drop-down__open" type="button">
               <svg width="20" height="20">
-                <use xlink:href="images/sprites/sprite-mono.svg#ellipsis-v"></use>
+                <use xlink:href="../images/sprites/sprite-mono.svg#ellipsis-v"></use>
               </svg>
             </button>
             <ul class="drop-down__list">
@@ -76,7 +78,7 @@
               </li>
             </ul>
           </div>
-          <img class="card__image" src="images/helafit-kombi.png" alt="Хелафит Комби">
+          <img class="card__image" src="../images/helafit-kombi.png" alt="Хелафит Комби">
           <div class="card__description">
             <p class="card__name helafit">Хелафит<sup>®</sup> Комби</p>
             <span class="card__price">270.00</span>
@@ -86,13 +88,13 @@
             <div class="card__count">
               <button class="card__btn card__minus" type="button" disabled>
                 <svg class="card__icon" width="20" height="20">
-                  <use xlink:href="images/sprites/sprite-mono.svg#minus"></use>
+                  <use xlink:href="../images/sprites/sprite-mono.svg#minus"></use>
                 </svg>
               </button>
               <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="" placeholder="0" value="0">
               <button class="card__btn card__plus" type="button">
                 <svg class="card__icon" width="20" height="20">
-                  <use xlink:href="images/sprites/sprite-mono.svg#plus"></use>
+                  <use xlink:href="../images/sprites/sprite-mono.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -103,7 +105,7 @@
           <div class="drop-down">
             <button class="drop-down__open" type="button">
               <svg width="20" height="20">
-                <use xlink:href="images/sprites/sprite-mono.svg#ellipsis-v"></use>
+                <use xlink:href="../images/sprites/sprite-mono.svg#ellipsis-v"></use>
               </svg>
             </button>
             <ul class="drop-down__list">
@@ -112,7 +114,7 @@
               </li>
             </ul>
           </div>
-          <img class="card__image" src="images/helafit-organik.png" alt="Хелафит Органик">
+          <img class="card__image" src="../images/helafit-organik.png" alt="Хелафит Органик">
           <div class="card__description">
             <p class="card__name helafit">Хелафит<sup>®</sup> Органик</p>
             <span class="card__price">270.00</span>
@@ -122,13 +124,13 @@
             <div class="card__count">
               <button class="card__btn card__minus" type="button" disabled>
                 <svg class="card__icon" width="20" height="20">
-                  <use xlink:href="images/sprites/sprite-mono.svg#minus"></use>
+                  <use xlink:href="../images/sprites/sprite-mono.svg#minus"></use>
                 </svg>
               </button>
               <input class="card__input" type="number" min="0" max="100000" step="10" name="" id="" placeholder="0" value="0">
               <button class="card__btn card__plus" type="button">
                 <svg class="card__icon" width="20" height="20">
-                  <use xlink:href="images/sprites/sprite-mono.svg#plus"></use>
+                  <use xlink:href="../images/sprites/sprite-mono.svg#plus"></use>
                 </svg>
               </button>
             </div>
@@ -138,7 +140,7 @@
       </ul>
       <div class="store__wrapper">
         <output class="store__total">0</output>
-        <a class="store__btn button" href="checkout.html">Оформить заказ</a>
+        <a class="store__btn button" href="/rus/checkout.html">Оформить заказ</a>
       </div>
     </div>
   </section>
@@ -149,19 +151,19 @@
       <ul class="documents__list">
         <li class="documents__item">
           <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
-          <img class="documents__image" src="images/documents/documents-01.jpg" alt="Свидетельство о Государственной регистрации">
+          <img class="documents__image" src="../images/documents/documents-01.jpg" alt="Свидетельство о Государственной регистрации">
         </li>
         <li class="documents__item">
           <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
-          <img class="documents__image" src="images/documents/documents-02.jpg" alt="Подтверждение качества для использования в сельскомхлзяйстве">
+          <img class="documents__image" src="../images/documents/documents-02.jpg" alt="Подтверждение качества для использования в сельскомхлзяйстве">
         </li>
         <li class="documents__item">
           <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
-          <img class="documents__image" src="images/documents/documents-03.jpg" alt="Технические условия">
+          <img class="documents__image" src="../images/documents/documents-03.jpg" alt="Технические условия">
         </li>
         <li class="documents__item">
           <a class="documents__link open-popup" href="#"><span class="sr-only">Увеличиль изображение</span></a>
-          <img class="documents__image" src="images/documents/documents-04.jpg" alt="Заключение санитарно-эпидемиологической экспертизы">
+          <img class="documents__image" src="../images/documents/documents-04.jpg" alt="Заключение санитарно-эпидемиологической экспертизы">
         </li>
       </ul>
     </div>
@@ -170,28 +172,28 @@
       <li class="popup" role="dialog">
         <div class="popup__body close-popup">
           <div class="popup__content">
-            <img class="popup__img" src="images/documents/documents-01.jpg" alt="Свидетельство о Государственной регистрации">
+            <img class="popup__img" src="../images/documents/documents-01.jpg" alt="Свидетельство о Государственной регистрации">
           </div>
         </div>
       </li>
       <li class="popup" role="dialog">
         <div class="popup__body close-popup">
           <div class="popup__content">
-            <img class="popup__img" src="images/documents/documents-02.jpg" alt="Подтверждение качества для использования в сельскомхлзяйстве">
+            <img class="popup__img" src="../images/documents/documents-02.jpg" alt="Подтверждение качества для использования в сельскомхлзяйстве">
           </div>
         </div>
       </li>
       <li class="popup" role="dialog">
         <div class="popup__body close-popup">
           <div class="popup__content">
-            <img class="popup__img" src="images/documents/documents-03.jpg" alt="Технические условия">
+            <img class="popup__img" src="../images/documents/documents-03.jpg" alt="Технические условия">
           </div>
         </div>
       </li>
       <li class="popup" role="dialog">
         <div class="popup__body close-popup">
           <div class="popup__content">
-            <img class="popup__img" src="images/documents/documents-04.jpg" alt="Заключение санитарно-эпидемиологической экспертизы">
+            <img class="popup__img" src="../images/documents/documents-04.jpg" alt="Заключение санитарно-эпидемиологической экспертизы">
           </div>
         </div>
       </li>

@@ -1,23 +1,10 @@
 import trapFocus from "./focusTrap";
+import { scrollLock, scrollUnlock } from '../helpers/scrollLock';
 
 const popup = document.querySelectorAll('.popup');
 const popupOpenBtn = document.querySelectorAll('.open-popup');
-const body = document.querySelector('body');
 let returnFocus;
 let popupActionBtns;
-
- export function bodyLock () {
-  const lockPaddingValue = `${ window.innerWidth - document.querySelector('main').offsetWidth }px`;
-  body.style.paddingRight = lockPaddingValue;
-  body.classList.add('lock');
-};
-
-export function bodyUnlock () {
-  setTimeout(() => {
-    body.removeAttribute('style');
-    body.classList.remove('lock');
-  }, 300);
-}
 
 export default() => {
 
@@ -33,37 +20,37 @@ export default() => {
     <div class="popup__menu">
       <button class="popup__btn change-size" type="button" ${disabled}>
       <svg width="20" height="20">
-        <use xlink:href="images/sprites/sprite-mono.svg#search-plus"></use>
+        <use xlink:href="../images/sprites/sprite-mono.svg#search-plus"></use>
       </svg>
         <svg width="20" height="20">
-          <use xlink:href="images/sprites/sprite-mono.svg#search-minus"></use>
+          <use xlink:href="../images/sprites/sprite-mono.svg#search-minus"></use>
         </svg>
         <span class="sr-only">Увеличить/Уменьшить</span>
       </button>
       <button class="popup__btn full-size" type="button">
         <svg width="20" height="20">
-          <use xlink:href="images/sprites/sprite-mono.svg#expand"></use>
+          <use xlink:href="../images/sprites/sprite-mono.svg#expand"></use>
         </svg>
         <svg width="20" height="20">
-          <use xlink:href="images/sprites/sprite-mono.svg#compress"></use>
+          <use xlink:href="../images/sprites/sprite-mono.svg#compress"></use>
         </svg>
         <span class="sr-only">Во весь экран</span>
       </button>
       <button class="popup__btn close-popup" type="button">
         <svg width="20" height="20">
-          <use xlink:href="images/sprites/sprite-mono.svg#close"></use>
+          <use xlink:href="../images/sprites/sprite-mono.svg#close"></use>
         </svg>
         <span class="sr-only">Закрыть</span>
       </button>
     </div>
     <button class="popup__btn left" type="button">
       <svg width="20" height="20">
-        <use xlink:href="images/sprites/sprite-mono.svg#chevron-left"></use>
+        <use xlink:href="../images/sprites/sprite-mono.svg#chevron-left"></use>
       </svg>
     <span class="sr-only">Влево</span></button>
     <button class="popup__btn right" type="button">
       <svg width="20" height="20">
-        <use xlink:href="images/sprites/sprite-mono.svg#chevron-right"></use>
+        <use xlink:href="../images/sprites/sprite-mono.svg#chevron-right"></use>
       </svg>
       <span class="sr-only">Вправо</span></button>
   </div>
@@ -82,7 +69,7 @@ export default() => {
         }
       });
 
-      bodyUnlock();
+      scrollUnlock();
 
       returnFocus.focus();
   };
@@ -100,7 +87,7 @@ export default() => {
     content.scrollTop = 0;
     item.classList.add('popup--open');
 
-    bodyLock();
+    scrollLock();
   }
 
   function openPopup(e) {

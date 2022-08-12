@@ -1,18 +1,23 @@
 import "focus-visible";
 import 'element-closest-polyfill';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import 'babel-polyfill';
 import popup from "./modules/popup";
 import productCount from "./modules/shop-product-count";
 import form from "./modules/form";
 import BurgerMenu from "./modules/burgerMenu";
 import documentReady from "./helpers/documentReady";
 
-popup();
+let burgerMenu
 
-form();
+documentReady(
 
-const burgerMenu = new BurgerMenu('.menu', '.burger-menu');
-window.burger = burgerMenu
+  popup(),
 
-productCount();
+  form(),
 
-documentReady();
+  // eslint-disable-next-line no-unused-vars
+  burgerMenu = new BurgerMenu('.menu', '.burger-menu'),
+
+  productCount(),
+);

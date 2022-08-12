@@ -1,4 +1,4 @@
-import { bodyLock, bodyUnlock } from './popup';
+import { scrollLock, scrollUnlock } from '../helpers/scrollLock';
 import trapFocus from './focusTrap';
 
 export default class BurgerMenu {
@@ -21,13 +21,13 @@ export default class BurgerMenu {
     window.scrollTo(0, 0)
     document.querySelector('.menu__list').scrollTop = 0
     trapFocus(this.menu, 'open', '.burger-menu')
-    bodyLock()
+    scrollLock()
     this.btn.style.backgroundImage = 'url(images/close.svg)'
   }
 
   close() {
     this.menu.classList.remove('open')
-    bodyUnlock()
+    scrollUnlock()
     this.btn.focus()
     this.btn.style.backgroundImage = 'url(images/burger.svg)'
   }

@@ -1,6 +1,8 @@
+import shopForm from "./shopForm";
+
 export default () => {
   const inputsArr = document.querySelectorAll('.form__input, .form__textarea');
-  const submitBtn = document.querySelector('.form__btn');
+  // const contactUsForm = document.forms['contact-us']
   const regEmail = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
   const regPhone = /^\+?3?8?(0(63|66|67|68|73|93|95|96|97|98|99)\d{7})$/;
 
@@ -92,9 +94,12 @@ export default () => {
     }
   };
 
-  function sendForm(e) {
-    e.preventDefault();
-  }
+  // function sendForm(e) {
+  //   console.log(e);
+  //   e.preventDefault();
+
+  //   console.dir(contactUsForm.elements.email.value);
+  // }
 
   function formEvents() {
 
@@ -106,8 +111,10 @@ export default () => {
       item.addEventListener('blur', formAnimate);
     });
 
-    submitBtn.addEventListener('submit', sendForm);
+    // contactUsForm.addEventListener('submit', sendForm);
   };
 
   formEvents();
 };
+
+shopForm()
