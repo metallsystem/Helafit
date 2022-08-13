@@ -1,7 +1,8 @@
-$black: #fff;
-$white: #000;
-$primary: #000;
-$secondary: #000;
+$black: #000;
+$white: #fff;
+$accent: #65bc46;
+$text: #58595b;
+$accent-hover: #40772c;
 $media1366: 1366;
 $media1024: 1024;
 $media769: 769;
@@ -13,14 +14,9 @@ $media576: 576;
   }
 }
 
-@mixin dmsans($weight) {
+@mixin opensans($weight) {
   font-weight: $weight;
-  font-family: "DMSans", sans-serif;
-}
-
-@mixin rubic($weight) {
-  font-weight: $weight;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 @mixin line-clamp($num) {
@@ -30,7 +26,6 @@ $media576: 576;
   text-overflow: ellipsis;
   word-wrap: break-word;
   -webkit-box-orient: vertical;
-  // box-orient: vertical;
   -ms-line-clamp: $num;
   -webkit-line-clamp: $num;
   line-clamp: $num;

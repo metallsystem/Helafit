@@ -5,7 +5,7 @@ import gulpIf from "gulp-if";
 import config from "../config";
 
 export const htmlBuild = () =>
-  src(`${config.src.html}/*.html`)
+  src(`${config.src.html}/{ukr,rus}/*.html`)
     .pipe(
       fileinclude({
         prefix: "@@",

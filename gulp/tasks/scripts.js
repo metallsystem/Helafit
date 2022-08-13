@@ -12,11 +12,11 @@ export const scriptsBuild = () => (
   browserify(`${config.src.js}/main.js`, { debug: true })
     .transform('babelify', { presets: ['@babel/preset-env'] })
     .bundle()
-    .on('error', function browserifyError(error) {
-      // eslint-disable-next-line no-console
-      console.log(error.stack);
-      this.emit('end');
-    })
+    // .on('error', function browserifyError(error) {
+    //   // eslint-disable-next-line no-console
+    //   console.log(error.stack);
+    //   this.emit('end');
+    // })
     .pipe(source('main.js'))
     .pipe(buffer())
     .pipe(gulpIf(config.isDev, sourcemaps.init({ loadMaps: true })))

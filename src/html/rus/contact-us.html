@@ -1,0 +1,97 @@
+@@include('parts/page-top.html', { "lang": "ru", "title": "Хелафит" })
+@@include('parts/header.html', { "main": "",
+                                 "benefits": "",
+                                 "products": "",
+                                 "usage": "",
+                                 "store": "",
+                                 "feedback": "",
+                                 "contacts": "menu__link--active",
+                                 "linkRus": "/rus/contact-us.html",
+                                 "linkUkr": "/ukr/contact-us.html",
+                                }
+                                )
+
+<main class="main">
+
+  <section class="intro" style="background-image: url(../images/contacts_intro.jpg);">
+    <div class="container">
+      <div class="intro__content page-content">
+        <h1 class="intro__title page-title">
+          Контакты
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="container">
+      <h2 class="title contacts__title">
+        Связяться с нами
+      </h2>
+      <div class="contacts__wrapper">
+        <form class="contacts__form form" action="#">
+          <div class="form__box">
+            <input class="form__input" type="text" name="name" id="name" required>
+            <label class="form__label" for="name">Имя*</label>
+          </div>
+          <div class="form__box">
+            <input class="form__input" type="tel" name="phone" id="phone" required>
+            <label class="form__label" for="phone">Телефон*</label>
+          </div>
+          <div class="form__box">
+            <input class="form__input" type="email" name="email" id="email">
+            <label class="form__label" for="email">Email</label>
+          </div>
+          <div class="form__box">
+            <textarea class="form__textarea" name="message" id="message"></textarea>
+            <label class="form__label" for="message">Сообщение</label>
+          </div>
+          <button class="button form__btn" type="submit">Отправить</button>
+        </form>
+        <address class="contacts__info">
+          <p class="contacts__subtitle">
+            Возникли вопросы?
+            <span>Вы можете связаться с нами:</span>
+          </p>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <a class="contacts__phone phone-link" href="tel:+380674857609">
+                <svg width="17" height="17">
+                  <use xlink:href="../images/sprites/sprite-mono.svg#phone"></use>
+                </svg>
+                <span>+38 067 485 76 09</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__phone phone-link" href="tel:+380677094119">
+                <svg width="17" height="17">
+                  <use xlink:href="../images/sprites/sprite-mono.svg#phone"></use>
+                </svg>
+                <span>+38 067 709 41 19</span>
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__email phone-link" href="mailto:helafitgroup@gmail.com" target="_blank">
+                <svg width="20" height="20">
+                  <use xlink:href="../images/sprites/sprite-mono.svg#envelope"></use>
+                </svg>
+                <span>helafitgroup@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+          <div class="contacts__address">
+            <span>Наш адрес:</span>
+            г. Одесса, 65005, ул. Мельницкая, дом 3, офис 38
+          </div>
+        </address>
+      </div>
+      <div class="contacts__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1374.2050230607322!2d30.710807812592417!3d46.460385366834245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6323011fd9e9f%3A0x38e7bff8d82d107a!2z0JzQtdC70YzQvdC40YbQutCw0Y8g0YPQuy4sIDMsINCe0LTQtdGB0YHQsCwg0J7QtNC10YHRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1sru!2sua!4v1629906910242!5m2!1sru!2sua" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+@@include('parts/footer.html')
+@@include('parts/page-bottom.html')
